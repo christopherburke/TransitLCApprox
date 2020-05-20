@@ -143,10 +143,10 @@ if __name__ == "__main__":
     z = np.linspace(0.0,1.0+usek,1000000)
     t0 = time.time()
     lc = transit_model_small_planet_quad(z, usek, 0.40, 0.27)
-    print time.time() - t0, "seconds wall time"
+    print(time.time() - t0, "seconds wall time")
     t0 = time.time()
     lc2 = transit_model_small_planet_nonlinear(z, usek, 0.432, 0.1787, 0.3969, -0.2577)
-    print time.time() - t0, "seconds wall time"
+    print(time.time() - t0, "seconds wall time")
     plt.plot(z,lc,'.b')
     plt.plot(z,lc2,'.r')
     plt.show()
